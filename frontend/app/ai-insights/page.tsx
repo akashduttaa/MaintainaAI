@@ -9,16 +9,5 @@ const insights = [
 ];
 
 export default function AIInsightsPage() {
-  return (
-    <AppShell>
-      <div className="space-y-3">
-        {insights.map((i, idx) => (
-          <Card key={i} className="border-l-4 border-l-cyan-300/70">
-            <p className="text-xs text-slate-500">Insight #{idx + 1}</p>
-            <p className="mt-1">{i}</p>
-          </Card>
-        ))}
-      </div>
-    </AppShell>
-  );
+  return <AppShell><div className="space-y-4">{insights.map((i) => <Card key={i}><p>{i}</p></Card>)}</div></AppShell>;
 }
